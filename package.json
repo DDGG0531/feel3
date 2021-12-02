@@ -7,10 +7,15 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.16"
+    "pinia": "^2.0.5",
+    "tailwindcss": "^2.2.19",
+    "vue": "^3.2.16",
+    "vue-router": "4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.3",
-    "vite": "^2.6.4"
+    "@vitejs/plugin-vue": "^1.10.1",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "vite": "^2.6.14"
   }
 }

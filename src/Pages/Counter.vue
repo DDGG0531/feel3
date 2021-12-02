@@ -1,0 +1,52 @@
+
+<script setup>
+import { storeToRefs } from "pinia";
+import { useCounterStore } from '@/stores/counter'
+
+const counter = useCounterStore();
+// 將一般物件 變成響應式物件
+const { count, doubleCount, halfCount } = storeToRefs(counter);
+
+
+
+
+
+//  拿到counter instance
+
+//  有三種方式可以變更state
+
+// 1. 直接修改資料
+// counter.count++
+
+
+// 2. 可以透過定義好的方法做資料調整
+// counter.increment();
+
+// 3. 可以改變整個state
+// counter.$patch({
+//   count: counter.count + 1
+// })
+
+
+</script>
+
+
+<template>
+  <div>Hello Counter!</div>
+  <div>origin count: {{ count }}</div>
+  <div>double count: {{ doubleCount }}</div>
+  <div>half count: {{ halfCount }}</div>
+
+  <div class="flex gap-3">
+    <button
+      @click="counter.increment()"
+      class="bg-blue-400 hover:bg-blue-300 active:bg-blue-500 hover:scale-105 active:scale-95 px-6 py-3 rounded-md font-bold text-white transition-all mb-5"
+    >加一</button>
+
+    <button
+      @click="counter.decrement()"
+      class="bg-blue-400 hover:bg-blue-300 active:bg-blue-500 hover:scale-105 active:scale-95 px-6 py-3 rounded-md font-bold text-white transition-all mb-5"
+    >減一</button>
+  </div>
+</template>
+

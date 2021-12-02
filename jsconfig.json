@@ -1,0 +1,10 @@
+// [pedning] 待研究
+// vscode 偵測 alias https://javascript.plainenglish.io/how-to-set-up-path-resolving-in-vite-ad284e0d9eae
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
